@@ -5,48 +5,98 @@ templ AboutTempl() {
     @AboutChanours()
 }
 
+templ AboutChanours() {
+    <div class="person chanours">
+        <img class="image" src="https://avatars.githubusercontent.com/u/39670936"></img>
+        <div desc="desc">
+        </div>
+    </div>
+}
+
 templ AboutProuk() {
     <div class="person prouk">
         <img class="image" src="https://avatars.githubusercontent.com/u/21678081"></img>
         <div desc="desc">
             <h2>TAHON Valentin</h2>
             <p>
-                Go engineer working at <a class="no" href="https://worldline.com/" target="_blank">Worldline</a>.<br></br>
+                Go engineer working at <a class="no" href="https://worldline.com/" target="_blank">Worldline🔗</a>.<br></br>
                 Sometimes I sleep, seometimes I don't.
             </p>
         </div>
-        <div class="proficiency">
-            <h2>Proficiency ( including some frameworks )</h2>
-             <table>
-              <tr>
+        <div class="proficiencies">
+        <h2>Proficiencies ( including some frameworks )</h2>
+        <h3>Languages</h3>
+        <table>
+            <tr>
                 <td>Golang</td>
-                <td>85%</td>
-              </tr>
-              <tr>
+                <td>
+                    <div class="progressContainer">
+                        <div class="progress" style="width:85%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td>HTML / CSS / JS</td>
-                <td>85%</td>
-              </tr>
-              <tr>
+                <td>
+                    <div class="progressContainer">
+                        <div class="progress" style="width:85%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td>NodeJS</td>
-                <td>80%</td>
-              </tr>
-              <tr>
+                <td>
+                    <div class="progressContainer">
+                        <div class="progress" style="width:80%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td>SQL (PgSLQ / MySQL)</td>
-                <td>80%</td>
-              </tr>
-              <tr>
+                <td>
+                    <div class="progressContainer">
+                        <div class="progress" style="width:80%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td>PHP</td>
-                <td>75%</td>
-              </tr>
-            </table>
+                <td>
+                    <div class="progressContainer">
+                        <div class="progress" style="width:70%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Rust</td>
+                <td>
+                    <div class="progressContainer">
+                        <div class="progress" style="width:60%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
         </div>
-    </div>
-}
-
-templ AboutChanours() {
-    <div class="person chanours">
-        <img class="image" src="https://avatars.githubusercontent.com/u/39670936"></img>
-        <div desc="desc">
+        <div class="experiences">
+            <h2>Experiences</h2>
+            <div>
+                <h3>Worldline</h3>
+            </div>
+            <div>
+                <h3>Umanis</h3>
+            </div>
+            <div>
+                <h3>Kimoce (Oslo)</h3>
+            </div>
+            <div>
+                <h3>Youdemus</h3>
+            </div>
         </div>
     </div>
 }
