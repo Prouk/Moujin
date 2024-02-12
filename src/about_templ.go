@@ -38,7 +38,7 @@ func AboutTempl() templ.Component {
 	})
 }
 
-func AboutProuk() templ.Component {
+func AboutChanours() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -51,7 +51,7 @@ func AboutProuk() templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person prouk\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/21678081\"><div desc=\"desc\"><h2>TAHON Valentin</h2><p>Go engineer working at <a class=\"no\" href=\"https://worldline.com/\" target=\"_blank\">Worldline</a>.<br>Sometimes I sleep, seometimes I don't.\r</p></div><div class=\"proficiency\"><h2>Proficiency ( including some frameworks )</h2><table><tr><td>Golang</td><td>85%</td></tr><tr><td>HTML / CSS / JS</td><td>85%</td></tr><tr><td>NodeJS</td><td>80%</td></tr><tr><td>SQL (PgSLQ / MySQL)</td><td>80%</td></tr><tr><td>PHP</td><td>75%</td></tr></table></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person chanours\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/39670936\"><div desc=\"desc\"></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -62,7 +62,7 @@ func AboutProuk() templ.Component {
 	})
 }
 
-func AboutChanours() templ.Component {
+func AboutProuk() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -75,7 +75,7 @@ func AboutChanours() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person chanours\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/39670936\"><div desc=\"desc\"></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person prouk\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/21678081\"><div desc=\"desc\"><h2>TAHON Valentin</h2><p>Go engineer working at <a class=\"no\" href=\"https://worldline.com/\" target=\"_blank\">Worldline🔗</a>.<br>Sometimes I sleep, seometimes I don't.\r</p></div><div class=\"proficiencies\"><h2>Proficiencies ( including some frameworks )</h2><h3>Languages</h3><table><tr><td>Golang</td><td><div class=\"progressContainer\"><div class=\"progress\" style=\"width:85%\"></div></div></td></tr><tr><td>HTML / CSS / JS</td><td><div class=\"progressContainer\"><div class=\"progress\" style=\"width:85%\"></div></div></td></tr><tr><td>NodeJS</td><td><div class=\"progressContainer\"><div class=\"progress\" style=\"width:80%\"></div></div></td></tr><tr><td>SQL (PgSLQ / MySQL)</td><td><div class=\"progressContainer\"><div class=\"progress\" style=\"width:80%\"></div></div></td></tr><tr><td>PHP</td><td><div class=\"progressContainer\"><div class=\"progress\" style=\"width:70%\"></div></div></td></tr><tr><td>Rust</td><td><div class=\"progressContainer\"><div class=\"progress\" style=\"width:60%\"></div></div></td></tr></table></div><div class=\"experiences\"><h2>Experiences</h2><div><h3>Worldline</h3></div><div><h3>Umanis</h3></div><div><h3>Kimoce (Oslo)</h3></div><div><h3>Youdemus</h3></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
