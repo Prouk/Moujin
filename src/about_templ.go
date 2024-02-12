@@ -23,7 +23,59 @@ func AboutTempl() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person prouk\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/21678081\"><div desc=\"desc\"><h2>TAHON Valentin</h2><p>Elitist developer,\r</p></div></div><div class=\"person chanours\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/39670936\"><div desc=\"desc\"></div></div>")
+		templ_7745c5c3_Err = AboutProuk().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = AboutChanours().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		if !templ_7745c5c3_IsBuffer {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteTo(templ_7745c5c3_W)
+		}
+		return templ_7745c5c3_Err
+	})
+}
+
+func AboutProuk() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
+		if !templ_7745c5c3_IsBuffer {
+			templ_7745c5c3_Buffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var2 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var2 == nil {
+			templ_7745c5c3_Var2 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person prouk\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/21678081\"><div desc=\"desc\"><h2>TAHON Valentin</h2><p>Go engineer working at <a class=\"no\" href=\"https://worldline.com/\" target=\"_blank\">Worldline</a>.<br>Sometimes I sleep, seometimes I don't.\r</p></div><div class=\"proficiency\"><h2>Proficiency ( including some frameworks )</h2><table><tr><td>Golang</td><td>85%</td></tr><tr><td>HTML / CSS / JS</td><td>85%</td></tr><tr><td>NodeJS</td><td>80%</td></tr><tr><td>SQL (PgSLQ / MySQL)</td><td>80%</td></tr><tr><td>PHP</td><td>75%</td></tr></table></div></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		if !templ_7745c5c3_IsBuffer {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteTo(templ_7745c5c3_W)
+		}
+		return templ_7745c5c3_Err
+	})
+}
+
+func AboutChanours() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
+		if !templ_7745c5c3_IsBuffer {
+			templ_7745c5c3_Buffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var3 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var3 == nil {
+			templ_7745c5c3_Var3 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person chanours\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/39670936\"><div desc=\"desc\"></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
