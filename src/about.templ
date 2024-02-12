@@ -1,15 +1,49 @@
 package src
 
 templ AboutTempl() {
+    @AboutProuk()
+    @AboutChanours()
+}
+
+templ AboutProuk() {
     <div class="person prouk">
         <img class="image" src="https://avatars.githubusercontent.com/u/21678081"></img>
         <div desc="desc">
             <h2>TAHON Valentin</h2>
             <p>
-                Elitist developer,
+                Go engineer working at <a class="no" href="https://worldline.com/" target="_blank">Worldline</a>.<br></br>
+                Sometimes I sleep, seometimes I don't.
             </p>
         </div>
+        <div class="proficiency">
+            <h2>Proficiency ( including some frameworks )</h2>
+             <table>
+              <tr>
+                <td>Golang</td>
+                <td>85%</td>
+              </tr>
+              <tr>
+                <td>HTML / CSS / JS</td>
+                <td>85%</td>
+              </tr>
+              <tr>
+                <td>NodeJS</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>SQL (PgSLQ / MySQL)</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>PHP</td>
+                <td>75%</td>
+              </tr>
+            </table>
+        </div>
     </div>
+}
+
+templ AboutChanours() {
     <div class="person chanours">
         <img class="image" src="https://avatars.githubusercontent.com/u/39670936"></img>
         <div desc="desc">

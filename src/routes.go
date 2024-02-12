@@ -19,7 +19,7 @@ func Home(c *gin.Context) {
 }
 
 func About(c *gin.Context) {
-	err := AboutPage("Home").Render(c, c.Writer)
+	err := AboutPage("About").Render(c, c.Writer)
 	if err != nil {
 		return
 	}

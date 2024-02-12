@@ -9,7 +9,7 @@ html {
 html.dark {
     background-color: #353535;
     color: #e2e2e2;
-    --box-shadow-color: #1c1c1c;
+    --box-shadow-color: #232323;
 }
 
 a.no {
@@ -41,7 +41,7 @@ header {
 footer {
     display: block;
     text-align: center;
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 15px 0 var(--box-shadow-color);
     width: fit-content;
@@ -51,7 +51,7 @@ footer {
 .person > div{
     margin: 20px auto;
     width: 80%;
-    padding: 15px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 15px 0 var(--box-shadow-color);
 }
