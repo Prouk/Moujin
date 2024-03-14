@@ -1,64 +1,122 @@
-html {
-    font-family: Tahoma, sans-serif;
-    transition: 0.25s;
-    color: #353535;
-    background-color: #e2e2e2;
-    --box-shadow-color: #b5b5b5;
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+a {
+    @apply cursor-pointer;
 }
 
-html.dark {
-    background-color: #353535;
-    color: #e2e2e2;
-    --box-shadow-color: #1c1c1c;
+#dark-mode-button {
+    @apply cursor-pointer fixed right-5 top-5 bg-slate-500 p-5 rounded-3xl shadow-md;
 }
 
-a.no {
-    color: inherit;
-    text-decoration: inherit;
+.abutton {
+    @apply inline-block px-5 py-3 m-5 bg-slate-500 text-white rounded-3xl shadow-lg;
 }
 
-.darkmode {
-    background-image: url("/ass/dark.svg");
-    transition: 0.25s;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+.header {
+    @apply h-28 container mx-auto bg-white flex items-center justify-center rounded-b-3xl shadow-lg font-mono
 }
 
-.darkmode.on {
-    background-image: url("/ass/light.svg");
+.material-container {
+    @apply container mx-auto p-5 my-5 bg-white rounded-3xl shadow-lg;
 }
 
-header {
-    text-align: center;
+.page-title {
+    @apply text-4xl font-mono text-gray-800;
 }
 
-footer {
-    display: block;
-    text-align: center;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px 0 var(--box-shadow-color);
-    width: fit-content;
-    margin: 50px auto;
+.card-container {
+    @apply flex flex-wrap justify-center items-center;
 }
 
-.person > div{
-    margin: 20px auto;
-    width: 80%;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px 0 var(--box-shadow-color);
+.card {
+    @apply relative cursor-pointer max-w-64 max-h-128 bg-slate-300 font-mono m-5 rounded-3xl flex flex-col justify-center shadow-2xl overflow-hidden;
+    @apply transition-all duration-500 ease-in-out;
 }
 
-.person .image {
-    display: block;
-    width: 200px;
-    margin: auto;
-    border-radius: 10px;
+.card .close {
+    @apply hidden cursor-pointer absolute right-5 top-5 bg-slate-500 p-5 rounded-full shadow-2xl;
+}
+
+.card-header {
+    @apply container text-lg grid grid-cols-2 gap-6;
+}
+
+.card-header > img {
+    @apply h-60 w-60 m-2 rounded-3xl shadow-2xl col-span-2;
+}
+
+.card-header .links {
+    @apply hidden;
+}
+
+.card-header .links a {
+    @apply block w-fit;
+}
+
+.card-header .links a * {
+    @apply inline;
+}
+
+.card-header > .links img {
+    @apply w-7 h-7;
+}
+
+.card-header > p {
+    @apply p-4 leading-relaxed col-span-2;
+}
+
+.card-content {
+    @apply hidden p-5 flex-row gap-12;
+}
+
+.card-content > div > * {
+    @apply my-5;
+}
+
+.card-content > div > * > * {
+    @apply my-2;
+}
+
+.card.full {
+    @apply cursor-default flex-1 basis-full max-w-256 max-h-256 mx-auto p-5 order-first;
+}
+
+.card.full .close {
+    @apply block;
+}
+
+.card.full .card-header > img {
+    @apply col-span-1;
+}
+
+.card.full .card-header .links {
+    @apply block;
+}
+
+.card.full .card-content {
+    @apply flex;
+}
+
+.dark-mode {
+    @apply bg-slate-800 text-slate-200
+}
+
+.dark-mode .header {
+    @apply bg-slate-700 text-slate-200;
+}
+
+.dark-mode .page-title {
+    @apply text-slate-200;
+}
+
+.dark-mode .material-container {
+    @apply bg-slate-700 text-slate-200 ;
+}
+
+.dark-mode .card {
+    @apply bg-slate-800 text-slate-200;
 }

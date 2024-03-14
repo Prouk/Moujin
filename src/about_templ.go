@@ -10,7 +10,7 @@ import "context"
 import "io"
 import "bytes"
 
-func AboutTempl() templ.Component {
+func AboutPage() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -23,7 +23,87 @@ func AboutTempl() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"person prouk\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/21678081\"><div desc=\"desc\"><h2>TAHON Valentin</h2><p>Elitist developer,\r</p></div></div><div class=\"person chanours\"><img class=\"image\" src=\"https://avatars.githubusercontent.com/u/39670936\"><div desc=\"desc\"></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h2 class=\"page-title\">About</h2><div class=\"card-container\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = ChanoursCard().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = ProukCard().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		if !templ_7745c5c3_IsBuffer {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteTo(templ_7745c5c3_W)
+		}
+		return templ_7745c5c3_Err
+	})
+}
+
+func LauraCard() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
+		if !templ_7745c5c3_IsBuffer {
+			templ_7745c5c3_Buffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var2 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var2 == nil {
+			templ_7745c5c3_Var2 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		if !templ_7745c5c3_IsBuffer {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteTo(templ_7745c5c3_W)
+		}
+		return templ_7745c5c3_Err
+	})
+}
+
+func ChanoursCard() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
+		if !templ_7745c5c3_IsBuffer {
+			templ_7745c5c3_Buffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var3 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var3 == nil {
+			templ_7745c5c3_Var3 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"card\" onclick=\"goFullCard(this)\"><span class=\"close\" onclick=\"goSmallCard(event)\">X</span><div class=\"card-header\"><img src=\"https://avatars.githubusercontent.com/u/39670936\"><div class=\"links\"><a class=\"abutton\" target=\"_blank\" href=\"https://www.linkedin.com/in/valentin-machefaux/\"><img src=\"/ass/linkedin.png\"> Machefaux Valentin</a> <a class=\"abutton\" target=\"_blank\" href=\"https://github.com/ValentinMachefaux\"><img src=\"/ass/github.png\"> Chanours</a></div><p class=\"name\">Machefaux Valentin</p><p class=\"job\">Web development student</p></div><div class=\"card-content\"><div class=\"skills\"></div><div class=\"experiences\"></div></div></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		if !templ_7745c5c3_IsBuffer {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteTo(templ_7745c5c3_W)
+		}
+		return templ_7745c5c3_Err
+	})
+}
+
+func ProukCard() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
+		if !templ_7745c5c3_IsBuffer {
+			templ_7745c5c3_Buffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var4 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var4 == nil {
+			templ_7745c5c3_Var4 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"card\" onclick=\"goFullCard(this)\"><span class=\"close\" onclick=\"goSmallCard(event)\">X</span><div class=\"card-header\"><img src=\"https://avatars.githubusercontent.com/u/21678081\"><div class=\"links\"><a class=\"abutton\" target=\"_blank\" href=\"https://www.linkedin.com/in/valentin-tahon/\"><img src=\"/ass/linkedin.png\"> Tahon Valentin</a> <a class=\"abutton\" target=\"_blank\" href=\"https://github.com/Prouk\"><img src=\"/ass/github.png\"> Prouk</a></div><p class=\"name\">Tahon Valentin</p><p class=\"job\">Study and developpement engineer at Worldline</p></div><div class=\"card-content\"><div class=\"skills\"><p>Skills : (frameworks not listed)</p><ul><li>Go</li><li>SQL</li><li>HTML/CSS/JS</li><li>NodeJS</li><li>PHP</li><li>Java</li><li>C#</li><li>Rust</li></ul></div><div class=\"experiences\"><p>Experiences : (More recent is last)</p><ul><li>Worldline (06/2022 -> today)</li><li>Umanis (05/2021) -> 03/2022)</li><li>Kimoce (10/2019 -> 09/2021)</li></ul></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
