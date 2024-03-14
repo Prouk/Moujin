@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-function toggleFullCard(el) {
-    el.classList.toggle("full")
+function goFullCard(el) {
+    el.classList.add("full")
+}
+
+function goSmallCard(e) {
+    e.target.parentElement.classList.remove('full');
+    e.stopPropagation();
 }

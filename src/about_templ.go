@@ -79,7 +79,7 @@ func ChanoursCard() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"card\" onclick=\"toggleFullCard(this)\"><div class=\"card-header\"><img src=\"https://avatars.githubusercontent.com/u/39670936\"><p class=\"name\">Machefaux Valentin</p><p class=\"job\">Web development student</p></div><div class=\"card-content\"><div class=\"skills\"></div><div class=\"experiences\"></div></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"card\" onclick=\"goFullCard(this)\"><span class=\"close\" onclick=\"goSmallCard(event)\">X</span><div class=\"card-header\"><img src=\"https://avatars.githubusercontent.com/u/39670936\"><div class=\"links\"><a class=\"abutton\" target=\"_blank\" href=\"https://www.linkedin.com/in/valentin-machefaux/\"><img src=\"/ass/linkedin.png\"> Machefaux Valentin</a> <a class=\"abutton\" target=\"_blank\" href=\"https://github.com/ValentinMachefaux\"><img src=\"/ass/github.png\"> Chanours</a></div><p class=\"name\">Machefaux Valentin</p><p class=\"job\">Web development student</p></div><div class=\"card-content\"><div class=\"skills\"></div><div class=\"experiences\"></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -103,7 +103,7 @@ func ProukCard() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"card\" onclick=\"toggleFullCard(this)\"><div class=\"card-header\"><img src=\"https://avatars.githubusercontent.com/u/21678081\"><p class=\"name\">Tahon Valentin</p><p class=\"job\">Study and developpement engineer at Worldline</p></div><div class=\"card-content\"><div class=\"skills\"><p>Skills : (frameworks not listed)</p><ul><li>Go</li><li>SQL</li><li>HTML/CSS/JS</li><li>NodeJS</li><li>PHP</li><li>Java</li><li>C#</li><li>Rust</li></ul></div><div class=\"experiences\"><p>Experiences : (More recent is last)</p><ul><li>Worldline (06/2022 -> today)</li><li>Umanis (05/2021) -> 03/2022)</li><li>Kimoce (10/2019 -> 09/2021)</li></ul></div></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"card\" onclick=\"goFullCard(this)\"><span class=\"close\" onclick=\"goSmallCard(event)\">X</span><div class=\"card-header\"><img src=\"https://avatars.githubusercontent.com/u/21678081\"><div class=\"links\"><a class=\"abutton\" target=\"_blank\" href=\"https://www.linkedin.com/in/valentin-tahon/\"><img src=\"/ass/linkedin.png\"> Tahon Valentin</a> <a class=\"abutton\" target=\"_blank\" href=\"https://github.com/Prouk\"><img src=\"/ass/github.png\"> Prouk</a></div><p class=\"name\">Tahon Valentin</p><p class=\"job\">Study and developpement engineer at Worldline</p></div><div class=\"card-content\"><div class=\"skills\"><p>Skills : (frameworks not listed)</p><ul><li>Go</li><li>SQL</li><li>HTML/CSS/JS</li><li>NodeJS</li><li>PHP</li><li>Java</li><li>C#</li><li>Rust</li></ul></div><div class=\"experiences\"><p>Experiences : (More recent is last)</p><ul><li>Worldline (06/2022 -> today)</li><li>Umanis (05/2021) -> 03/2022)</li><li>Kimoce (10/2019 -> 09/2021)</li></ul></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

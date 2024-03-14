@@ -12,9 +12,14 @@ templ LauraCard() {
 }
 
 templ ChanoursCard() {
-    <div class="card" onclick="toggleFullCard(this)">
+    <div class="card" onclick="goFullCard(this)">
+    <span class="close" onclick="goSmallCard(event)">X</span>
         <div class="card-header">
             <img src="https://avatars.githubusercontent.com/u/39670936"/>
+            <div class="links">
+                <a class="abutton" target="_blank" href="https://www.linkedin.com/in/valentin-machefaux/"><img src="/ass/linkedin.png"/> Machefaux Valentin</a>
+                <a class="abutton" target="_blank" href="https://github.com/ValentinMachefaux"><img src="/ass/github.png"/> Chanours</a>
+            </div>
             <p class="name">Machefaux Valentin</p>
             <p class="job">Web development student</p>
         </div>
@@ -28,9 +33,14 @@ templ ChanoursCard() {
 }
 
 templ ProukCard() {
-    <div class="card" onclick="toggleFullCard(this)">
+    <div class="card" onclick="goFullCard(this)">
+    <span class="close" onclick="goSmallCard(event)">X</span>
         <div class="card-header">
             <img src="https://avatars.githubusercontent.com/u/21678081"/>
+            <div class="links">
+                <a class="abutton" target="_blank" href="https://www.linkedin.com/in/valentin-tahon/"><img src="/ass/linkedin.png"/> Tahon Valentin</a>
+                <a class="abutton" target="_blank" href="https://github.com/Prouk"><img src="/ass/github.png"/> Prouk</a>
+            </div>
             <p class="name">Tahon Valentin</p>
             <p class="job">Study and developpement engineer at Worldline</p>
         </div>
