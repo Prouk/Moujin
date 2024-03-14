@@ -1,23 +1,14 @@
-if (document.readyState === "complete") {
-    ready();
-} else {
-    document.addEventListener("DOMContentLoaded", ready);
-}
-
-function ready() {
-    console.log("ready")
-    const html = document.getElementsByTagName( 'html' )[0]
-    const darkmodeButton = document.getElementsByClassName("darkmode")[0]
-    function switchDarkMode() {
-        console.log('clicky click')
-        if (darkmodeButton.classList.contains("on")) {
-            darkmodeButton.classList.remove("on")
-            html.classList.remove("dark")
-        } else {
-            darkmodeButton.classList.add("on")
-            html.classList.add("dark")
-        }
+document.addEventListener("DOMContentLoaded", function() {
+    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)")
+    if (darkThemeMq.matches) {
+        document.documentElement.classList.add('dark-mode')
     }
-    darkmodeButton.onclick = switchDarkMode
+    const darkModeButton = document.getElementById('dark-mode-button')
+    darkModeButton.onclick = function () {
+        document.documentElement.classList.toggle('dark-mode')
+    }
+});
 
+function toggleFullCard(el) {
+    el.classList.toggle("full")
 }

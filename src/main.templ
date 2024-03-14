@@ -1,46 +1,46 @@
 package src
 
-templ MainTemplate(pageTitle string, contents templ.Component) {
+templ HomeTemplate() {
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" class="bg-slate-200">
     <head>
-        <title>Moujin - {pageTitle}</title>
+        <title>Moujin</title>
         <meta charset="UTF-8"/>
         <meta name="description" content="Moujin is an ongoing project. If you want to share an album or chat with connected weebz, feel free to hop in !"/>
         <meta name="keywords" content="Album, Music, Group"/>
         <meta name="author" content="Prouk (Tahon Valentin)"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/tail.css"/>
         <script src="/js/htmx.min.js"></script>
         <script src="/js/main.js"></script>
     </head>
-    <body>
-        <header>
-            <h1><a class="no" href="/">Moujin</a></h1>
+    <body class="text-slate-700">
+        <img id="dark-mode-button" src="/ass/light.svg"/>
+        <header class="header">
+            <h1 class="text-5xl"><a
+                hx-get="/home"
+                hx-trigger="click"
+                hx-target="#content"
+                hx-swap="innerHTML">Moujin</a></h1>
         </header>
-        <div id="content">
-            <span class="darkmode"></span>
-            @contents
+        <div id="content" class="material-container">
+            @HomePage()
         </div>
-        <footer>
+        <footer class="material-container text-center">
             <p>
                 this site is an ongoing project, I don't intend to be regular with updates. I do this as a hobby.
             </p>
             <p>
-                <a href="/about">About me</a>
+                <a class="abutton"
+                hx-get="/about"
+                hx-trigger="click"
+                hx-target="#content"
+                hx-swap="innerHTML">About</a>
             </p>
             <p>
-                This work is under the wtfpl license :  <a href="http://www.wtfpl.net/" target="_blank"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png" width="80" height="15" alt="WTFPL"/></a>
+                This work is under the wtfpl license : <a href="http://www.wtfpl.net/" target="_blank"><img class="inline" src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png" width="80" height="15" alt="WTFPL"/></a>
             </p>
         </footer>
     </body>
     </html>
-}
-
-templ HomePage(pageTitle string) {
-    @MainTemplate(pageTitle, MoujinTempl())
-}
-
-templ AboutPage(pageTitle string) {
-    @MainTemplate(pageTitle, AboutTempl())
 }
