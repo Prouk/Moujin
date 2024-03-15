@@ -9,7 +9,7 @@ a {
 }
 
 #dark-mode-button {
-    @apply cursor-pointer fixed right-5 top-5 bg-slate-500 p-5 rounded-3xl shadow-md;
+    @apply z-50 cursor-pointer fixed right-5 top-5 bg-slate-500 p-5 rounded-3xl shadow-lg;
 }
 
 .abutton {
@@ -33,20 +33,20 @@ a {
 }
 
 .card {
-    @apply relative cursor-pointer max-w-64 max-h-128 bg-slate-300 font-mono m-5 rounded-3xl flex flex-col justify-center shadow-2xl overflow-hidden;
+    @apply relative cursor-pointer max-w-64 max-h-128 bg-slate-300 font-mono m-5 rounded-3xl flex flex-col justify-center shadow-lg overflow-hidden;
     @apply transition-all duration-500 ease-in-out;
 }
 
 .card .close {
-    @apply hidden cursor-pointer absolute right-5 top-5 bg-slate-500 p-5 rounded-full shadow-2xl;
+    @apply hidden absolute right-1 top-1;
 }
 
 .card-header {
-    @apply container text-lg grid grid-cols-2 gap-6;
+    @apply container text-lg gap-6;
 }
 
 .card-header > img {
-    @apply h-60 w-60 m-2 rounded-3xl shadow-2xl col-span-2;
+    @apply h-60 w-60 m-2 float-start rounded-3xl shadow-lg;
 }
 
 .card-header .links {
@@ -54,7 +54,7 @@ a {
 }
 
 .card-header .links a {
-    @apply block w-fit;
+    @apply block w-fit ;
 }
 
 .card-header .links a * {
@@ -66,11 +66,11 @@ a {
 }
 
 .card-header > p {
-    @apply p-4 leading-relaxed col-span-2;
+    @apply p-4 leading-relaxed;
 }
 
 .card-content {
-    @apply hidden p-5 flex-row gap-12;
+    @apply hidden p-5 flex-row flex-wrap gap-12;
 }
 
 .card-content > div > * {
@@ -82,19 +82,15 @@ a {
 }
 
 .card.full {
-    @apply cursor-default flex-1 basis-full max-w-256 max-h-256 mx-auto p-5 order-first;
+    @apply cursor-default block flex-1 basis-full max-w-256 max-h-256 mx-auto p-5 order-first overflow-auto;
 }
 
 .card.full .close {
     @apply block;
 }
 
-.card.full .card-header > img {
-    @apply col-span-1;
-}
-
-.card.full .card-header .links {
-    @apply block;
+.card.full .card-header > img, .card.full .card-header .links {
+    @apply inline-block;
 }
 
 .card.full .card-content {

@@ -31,7 +31,7 @@ func HomeTemplate() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><footer class=\"material-container text-center\"><p>this site is an ongoing project, I don't intend to be regular with updates. I do this as a hobby.</p><p><a class=\"abutton\" hx-get=\"/about\" hx-trigger=\"click\" hx-target=\"#content\" hx-swap=\"innerHTML\">About</a></p><p>This work is under the wtfpl license : <a href=\"http://www.wtfpl.net/\" target=\"_blank\"><img class=\"inline\" src=\"http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png\" width=\"80\" height=\"15\" alt=\"WTFPL\"></a></p></footer></body></html>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><footer class=\"material-container text-center\"><p>this site is an ongoing project, I don't intend to be regular with updates. I do this as a hobby.\r</p><p><a class=\"abutton\" hx-get=\"/about\" hx-trigger=\"click\" hx-target=\"#content\" hx-swap=\"innerHTML\">About</a></p><p>This work is under the wtfpl license : <a href=\"http://www.wtfpl.net/\" target=\"_blank\"><img class=\"inline\" src=\"http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png\" width=\"80\" height=\"15\" alt=\"WTFPL\"></a></p></footer></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
