@@ -2,8 +2,10 @@ package main
 
 import (
 	"github.com/Prouk/Moujin/src"
-	"github.com/gin-gonic/gin"
+	"github.com/go-chi/chi/v5"
 	"log"
+	"net/http"
+	"os"
 )
 
 func main() {
@@ -14,11 +16,14 @@ func main() {
 		log.Printf("error reading config file: %s", err)
 		return
 	}
-	m.R = gin.Default()
-	m.PopulateRoutes()
-	err = m.R.Run(m.C.Port)
+	m.R = chi.NewRouter()
+	m.Dir, err = os.Getwd()
 	if err != nil {
-		log.Printf("error launching server: %s", err)
+		return
+	}
+	m.PopulateRoutes()
+	err = http.ListenAndServe(m.C.Port, m.R)
+	if err != nil {
 		return
 	}
 }

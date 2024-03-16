@@ -1,12 +1,11 @@
 package src
 
-import (
-	"github.com/gin-gonic/gin"
-)
+import "github.com/go-chi/chi/v5"
 
 type Moujin struct {
-	C *Config
-	R *gin.Engine
+	C   *Config
+	R   *chi.Mux
+	Dir string
 }
 
 type Config struct {
