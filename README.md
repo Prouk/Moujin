@@ -22,10 +22,6 @@ To get the project set up:
 
 You can run tests in this project by executing `go test`.
 
-## Usage
-
-// Include instructions on how to use the project here.
-
 ## Contributing
 
 We welcome contributions! Please see our contribution guide for more details.
@@ -33,7 +29,3 @@ We welcome contributions! Please see our contribution guide for more details.
 ## License
 
 This project is licensed under the terms of the "Do What The F*ck You Want To Public License" (WTFPL). For more information, please see http://www.wtfpl.net/about/.
-
-## Contact
-
-// Provide contact details or support email for the project here.
