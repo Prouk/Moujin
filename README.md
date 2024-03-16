@@ -15,9 +15,8 @@ This is a web development project primarily developed in Go programming language
 
 To get the project set up:
 
-1. Setup Chi Router
-2. Setup Templ for Templates
-3. Setup Tailwind CSS for Styling
+1. Setup Templ for Templates
+2. Setup Tailwind CSS for Styling
 
 ## Running Tests
 
